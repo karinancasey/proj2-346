@@ -29,4 +29,7 @@ app.get('/', function (req, res) {
 			}
 	});
 });
+let to_send = JSON.stringify(data);
+res.send(to_send);
+});
 app.listen(3000);
