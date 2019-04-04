@@ -14,20 +14,20 @@ I hope I'm actually allowed to do this in javascript instead of python.
 "use strict";
 (function(){
 
-  let pencolor = "black";
-  let mode = "pen";
-  let pensize = 1;
 
-  /**when the page loads make the canvases look right
-     then establish what the buttons do
-   */
   window.onload = function() {
     makeBoxTop();
     makeBoxLeft();
     makeSquares();
 
+    document.getElementById("reset").onclick = makeSquares;
+
 
   };
+
+
+
+
   //guides on the top, fill from db
   function makeBoxTop() {
     for(let i = 0; i < 5; i++){
@@ -50,6 +50,7 @@ I hope I'm actually allowed to do this in javascript instead of python.
   }
   //25 is a lot of squares. surely there's a better way to do this. what have i done
   function makeSquares() {
+    document.getElementById("squares").innerHTML = "";
     for(let y = 0; y < 5; y++){
       let row = document.createElement("div");
       row.classList.add("row");
