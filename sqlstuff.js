@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 	con.connect(function(err){
 		if (err) throw err;
 		console.log("Connected!");
-		con.query("SELECT row1,row2,row3,row4,row5 FROM rows", function (err, result, fields) { 
+		con.query("SELECT row1,row2,row3,row4,row5 FROM rows", function (err, result, fields) {
 			if (err) throw err;
 			let smalldata = [];
 			for(let i = 0; i < 5; i++){
