@@ -14,9 +14,6 @@ I hope I'm actually allowed to do this in javascript instead of python.
 "use strict";
 (function(){
 
-  let pencolor = "black";
-  let mode = "pen";
-  let pensize = 1;
 
   /**when the page loads make the canvases look right
      then establish what the buttons do
@@ -58,15 +55,15 @@ I hope I'm actually allowed to do this in javascript instead of python.
         square.classList.add("square");
         //if square is part of the solution set that here
 
-        square.onclick = colorIn(square);
+       // square.onclick = colorIn(square); ok we're not doing this right now
         row.appendChild(square);
       }
       document.getElementById("squares").appendChild(row);
     }
 
   }
-  function colorIn(square) {
-    this.classList.add("filled");
-  }
+ // function colorIn(square) {
+   // this.classList.add("filled");
+ // }
 
 })();
