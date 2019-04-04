@@ -14,6 +14,9 @@ I hope I'm actually allowed to do this in javascript instead of python.
 "use strict";
 (function(){
 
+  let pencolor = "black";
+  let mode = "pen";
+  let pensize = 1;
 
   /**when the page loads make the canvases look right
      then establish what the buttons do
@@ -27,7 +30,7 @@ I hope I'm actually allowed to do this in javascript instead of python.
   };
   //guides on the top, fill from db
   function makeBoxTop() {
-    for(let i = 0; i < 15; i++){
+    for(let i = 0; i < 5; i++){
       let box = document.createElement("div");
       box.classList.add("boxtop");
       box.position = i;
@@ -37,7 +40,7 @@ I hope I'm actually allowed to do this in javascript instead of python.
   }
   //guides on the left, fill from db
   function makeBoxLeft() {
-    for(let i = 0; i < 15; i++){
+    for(let i = 0; i < 5; i++){
       let box = document.createElement("div");
       box.classList.add("boxleft");
       box.position = i;
@@ -45,25 +48,27 @@ I hope I'm actually allowed to do this in javascript instead of python.
       document.getElementById("boxlefts").appendChild(box);
     }
   }
-  //225 is a lot of squares. surely there's a better way to do this. what have i done
+  //25 is a lot of squares. surely there's a better way to do this. what have i done
   function makeSquares() {
-    for(let y = 0; y < 15; y++){
+    for(let y = 0; y < 5; y++){
       let row = document.createElement("div");
       row.classList.add("row");
-      for(let x = 0; x < 15; x++){
+      for(let x = 0; x < 5; x++){
         let square = document.createElement("div");
         square.classList.add("square");
         //if square is part of the solution set that here
 
-       // square.onclick = colorIn(square); ok we're not doing this right now
+        square.onclick = colorIn;
+
+
         row.appendChild(square);
       }
       document.getElementById("squares").appendChild(row);
     }
 
   }
- // function colorIn(square) {
-   // this.classList.add("filled");
- // }
+  function colorIn() {
+    this.classList.toggle("filled");
+  }
 
 })();

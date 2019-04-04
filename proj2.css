@@ -33,13 +33,13 @@ body {
 
 .boxleft {
   width: 43px;
-  height: 26px;
+  height: 80px;
   border-right: 1px solid black;
 }
 
 .boxtop {
   /* haha, boxtops  */
-  width: 26px;
+  width: 80px;
   height: 43px;
   border-bottom: 1px solid black;
 
@@ -100,8 +100,8 @@ body {
 
 .square {
   border: 1px solid black;
-  width: 25px;
-  height: 25px;
+  width: 79px;
+  height: 79px;
 }
 
 .stat {
